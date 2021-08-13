@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #1c1f25">
+    <header class="header">
+        <div class="container header-top">
+          <div><a href="#">Dasinmasina icaze yoxdur</a></div>
+          <div><a href="#">Tez-tez verilen suallar</a></div>
+          <div style="flex-basis: 200px"></div>
+          <div class="animation">
+            <span id="usd">1 USD - 1.70 AZN</span>
+            
+          </div>
+          <div class="phone">
+            <span id="phone"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-telephone" viewBox="0 0 16 16">
+                <path
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+              </svg><a href="+994507007002">+994507007002</a>
+            </span>
+          </div>
+          <div>
+            <select id="lang">
+              <option value="aze">AZE</option>
+              <option value="eng">ENG</option>
+              <option value="rus">RUS</option>
+            </select>
+          </div>
+          <div>
+            <a href="./qeydiyyat.html">
+              <button class="btn btn-primary">Qeydiyyat</button>
+            </a>
+            
+          </div>
+        </div>
+        <div class="container header-bottom">
+          <div>
+            <a href="#"><img src="https://velocity.az/front/img/logo/logo.svg" alt="" /></a>
+          </div>
+          <div><a href="./haqqimizda.html">Haqqimizda</a></div>
+          <div><a href="#">Tarifler</a></div>
+          <div><a href="#">Magazalar</a></div>
+          <div><a href="#">Xidmetler</a></div>
+          <div><a href="#">Yenilikler</a></div>
+          <div><a href="#">Elaqe</a></div>
+          <div></div>
+          <div></div>
+          <div></div>
+    
+          <div class="account">
+            <a style="display: flex;align-items: center;" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                height="18" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+              </svg>
+              <span>Hesabim</span></a>
+          </div>
+          <div>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                class="bi bi-cart-x-fill" viewBox="0 0 16 16">
+                <path
+                  d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7.354 5.646 8.5 6.793l1.146-1.147a.5.5 0 0 1 .708.708L9.207 7.5l1.147 1.146a.5.5 0 0 1-.708.708L8.5 8.207 7.354 9.354a.5.5 0 1 1-.708-.708L7.793 7.5 6.646 6.354a.5.5 0 1 1 .708-.708z" />
+              </svg></a>
+          </div>
+          <div>
+            <svg id="circule" xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
+              class="bi bi-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            </svg>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="container carusel">
+          <div class="carousel" data-flickity='{ "wrapAround": true,"autoPlay": true }'>
+            <div class="carousel-cell img-1">
+              <h1>
+                Amerikadan sifaris et,<br />
+                biz getirek!
+              </h1>
+              <p>
+                Türkiyənin bütün onlayn mağazalarından Azərbaycanın bütün <br />
+                bölgələrinə çatdırılma
+              </p>
+    
+              <button>Etrafli</button>
+            </div>
+            <div class="carousel-cell img-2">
+              <h1>
+                Diqqət !!! Türkiyə <br />
+                Ünvanımız Dəyişdi
+              </h1>
+              <p>
+                Xidmət səviyyəsinin yüksəldilməsi məqsədiylə Velocity Türkiyə
+                anbarı <br />
+                dəyişdirildi
+              </p>
+    
+              <button>Etrafli</button>
+            </div>
+            <div class="carousel-cell img-3">
+              <h1>
+                Velocity.az ilə Rahat və <br />
+                təhlükəsiz çatdırılma
+              </h1>
+              <p>Velocity.az fəaliyyətə başladı</p>
+    
+              <button>Etrafli</button>
+            </div>
+            <div class="carousel-cell img-4">
+              <h1>
+                Türkiyədən Azərbaycana <br />
+                çatdırılma
+              </h1>
+              <p>
+                Türkiyənin bütün onlayn mağazalarından Azərbaycanın bütün <br />
+                bölgələrinə çatdırılma
+              </p>
+    
+              <button>Etrafli</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    
+      <section>
+        <div class="container">
+          <div class="kalkulyator">
+            <div class="heading">
+              <h2 class="tittle">Kalkulyator</h2>
+              <p class="tittle parag">Bağlamanın hər hansı bir tərəfinin ölçüsü 1m və daha çox olarsa, bağlamanın həm həcm,
+                həm də fiziki çəkisi hesablanır. Hansı çəki yüksək olarsa, daşınma haqqı ona əsasən hesablanır.</p>
+            </div>
+            <div class="calculyator-content">
+              <div style="display: flex; flex-wrap: nowrap;" class="row">
+                <div class="col-6 col-px-16">
+                  <h6>Olke secin</h6>
+                  <div class="tabs-flag">
+                    <button data-currency-rate="1.7" data-currency="$"
+                      data-price="[{&quot;from_weight&quot;:0,&quot;to_weight&quot;:0.1,&quot;liquid_price&quot;:1,&quot;price&quot;:1,&quot;discounted_price&quot;:0.99},{&quot;from_weight&quot;:0.101,&quot;to_weight&quot;:0.249,&quot;liquid_price&quot;:2,&quot;price&quot;:2,&quot;discounted_price&quot;:1.99},{&quot;from_weight&quot;:0.25,&quot;to_weight&quot;:0.499,&quot;liquid_price&quot;:3,&quot;price&quot;:3,&quot;discounted_price&quot;:2.99},{&quot;from_weight&quot;:0.5,&quot;to_weight&quot;:0.749,&quot;liquid_price&quot;:4,&quot;price&quot;:4,&quot;discounted_price&quot;:3.79},{&quot;from_weight&quot;:0.75,&quot;to_weight&quot;:0.999,&quot;liquid_price&quot;:4.2,&quot;price&quot;:4.2,&quot;discounted_price&quot;:3.49},{&quot;from_weight&quot;:1,&quot;to_weight&quot;:4.999,&quot;liquid_price&quot;:4.5,&quot;price&quot;:4.5,&quot;discounted_price&quot;:3.49},{&quot;from_weight&quot;:5,&quot;to_weight&quot;:9.999,&quot;liquid_price&quot;:4.3,&quot;price&quot;:4.3,&quot;discounted_price&quot;:3.49},{&quot;from_weight&quot;:10,&quot;to_weight&quot;:9999999,&quot;liquid_price&quot;:4,&quot;price&quot;:4,&quot;discounted_price&quot;:4}]"
+                      class="btn btn--tab js-calculator-tab-c is-tab-active">
+                      <img src="https://velocity.az/frontend/web/uploads//images/country/Turkey.svg" alt="Türkiyə">
+                      <span style="color: white;">Türkiyə</span>
+                    </button>
+                    <button data-currency-rate="1.7" data-currency="$"
+                      data-price="[{&quot;from_weight&quot;:0.001,&quot;to_weight&quot;:0.1,&quot;liquid_price&quot;:1.5,&quot;price&quot;:1.5,&quot;discounted_price&quot;:null},{&quot;from_weight&quot;:0.101,&quot;to_weight&quot;:0.249,&quot;liquid_price&quot;:2.5,&quot;price&quot;:2.5,&quot;discounted_price&quot;:null},{&quot;from_weight&quot;:0.25,&quot;to_weight&quot;:0.499,&quot;liquid_price&quot;:4.5,&quot;price&quot;:4.5,&quot;discounted_price&quot;:null},{&quot;from_weight&quot;:0.5,&quot;to_weight&quot;:0.749,&quot;liquid_price&quot;:5.5,&quot;price&quot;:5.5,&quot;discounted_price&quot;:5.5},{&quot;from_weight&quot;:0.75,&quot;to_weight&quot;:0.999,&quot;liquid_price&quot;:6.5,&quot;price&quot;:6.5,&quot;discounted_price&quot;:6.5},{&quot;from_weight&quot;:1,&quot;to_weight&quot;:4.999,&quot;liquid_price&quot;:7.95,&quot;price&quot;:7.95,&quot;discounted_price&quot;:7.95},{&quot;from_weight&quot;:5,&quot;to_weight&quot;:9.999,&quot;liquid_price&quot;:7.5,&quot;price&quot;:7.5,&quot;discounted_price&quot;:7.5},{&quot;from_weight&quot;:10,&quot;to_weight&quot;:100000,&quot;liquid_price&quot;:6.5,&quot;price&quot;:6.5,&quot;discounted_price&quot;:6.5}]"
+                      class="btn btn--tab js-calculator-tab-c ">
+                      <img src="https://velocity.az/frontend/web/uploads//images/country/US.svg" alt="ABŞ">
+                      <span style="color: white;">ABŞ</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="col-6 col-px-16">
+                  <h6>Baglamanin novu</h6>
+                  <div class="tabs-adjacent">
+                    <button data-type="standart" class="btn btn--adjacent-tab parcel-type js-adjacent-tab is-tab-active">
+                      <span style="color: white;">Adi məhsul</span>
+                    </button>
+                    <button data-type="liquid" class="btn btn--adjacent-tab parcel-type js-adjacent-tab">
+                      <span style="color: white;">Maye və kosmetika</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6 col-px-16">
+                  <div class="range-content bg-input">
+                    <div class="range-article">
+                      <p>Hündürlük</p>
+                      <input type="number" name="" id="rangeValue" class=" text-end calc-height" min="1" max="100"
+                        value="32">
+                    </div>
+                    <select name="" id="" class="form-control calc-height-type js-niceselect" style="display: none;">
+                      <option value="sm">sm</option>
+                      <option value="m">m</option>
+                    </select>
+                    <div class="nice-select form-control calc-height-type js-niceselect" tabindex="0"><span
+                        class="current">sm</span>
+                      <ul class="list">
+                        <li data-value="sm" class="option selected focus">sm</li>
+                        <li data-value="m" class="option">m</li>
+                      </ul>
+                    </div>
+                    <input type="range" min="1" max="100" value="32" class="range" id="rangeSlider"
+                      style="background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(0.313131, rgb(201, 255, 199)), color-stop(0.313131, rgb(24, 28, 31)));">
+                  </div>
+                  <div class="range-content bg-input">
+                    <div class="range-article">
+                      <p>Hündürlük</p>
+                      <input type="number" name="" id="rangeValue" class=" text-end calc-height" min="1" max="100"
+                        value="32">
+                    </div>
+                    <select name="" id="" class="form-control calc-height-type js-niceselect" style="display: none;">
+                      <option value="sm">sm</option>
+                      <option value="m">m</option>
+                    </select>
+                    <div class="nice-select form-control calc-height-type js-niceselect" tabindex="0"><span
+                        class="current">sm</span>
+                      <ul class="list">
+                        <li data-value="sm" class="option selected focus">sm</li>
+                        <li data-value="m" class="option">m</li>
+                      </ul>
+                    </div>
+                    <input type="range" min="1" max="100" value="32" class="range" id="rangeSlider"
+                      style="background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(0.313131, rgb(201, 255, 199)), color-stop(0.313131, rgb(24, 28, 31)));">
+                  </div>
+                </div>
+                <div class="col-lg-6 col-px-16">
+                  <div class="range-content bg-input">
+                    <div class="range-article">
+                      <p>Uzunluq</p>
+                      <input type="number" name="" id="rangeValue" class=" text-end calc-length" min="0" max="100"
+                        value="0">
+                    </div>
+                    <select class="form-control calc-length-type js-niceselect" style="display: none;">
+                      <option value="sm">sm</option>
+                      <option value="m">m</option>
+                    </select>
+                    <div class="nice-select form-control calc-length-type js-niceselect" tabindex="0"><span
+                        class="current">sm</span>
+                      <ul class="list">
+                        <li data-value="sm" class="option selected">sm</li>
+                        <li data-value="m" class="option">m</li>
+                      </ul>
+                    </div>
+                    <input type="range" min="0" max="100" value="0" class="range" id="rangeSlider"
+                      style="background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(201, 255, 199)), from(rgb(24, 28, 31)));">
+                  </div>
+                  <div class="range-content bg-input">
+                    <div class="range-article">
+                      <p>Bağlamanın çəkisi</p>
+                      <input type="number" name="" id="rangeValue" class=" text-end calc-weight" min="0" max="100"
+                        value="5">
+                    </div>
+                    <div>
+                      <select class="form-control calc-weight-type js-niceselect" style="display: none;">
+                        <option value="kq">kq</option>
+                        <option value="gr">qr</option>
+                      </select>
+                      <div class="nice-select form-control calc-weight-type js-niceselect" tabindex="0"><span
+                          class="current">kq</span>
+                        <ul class="list">
+                          <li data-value="kq" class="option selected">kq</li>
+                          <li data-value="gr" class="option">qr</li>
+                        </ul>
+                      </div>
+                    </div>
+    
+                    <input type="range" min="0" max="100" value="5" class="range" id="rangeSlider"
+                      style="background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop(0.05, rgb(201, 255, 199)), color-stop(0.05, rgb(24, 28, 31)));">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+    
+      <div class="container">
+        <h2>Nece Isleyirik?</h2>
+        <br />
+        <div class="row">
+          <div class="col-1">
+            <div class="table1">
+              <div class="svgs">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-book-fill"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+              </div>
+              <h1>Qeydiyyatdan kec</h1>
+              <p>
+                Saytımızda qeydiyyatdan keçməklə, xaricdə daimi ünvana sahib olun
+              </p>
+              <a href=""> <button class="btn btn-primary">Etrafli</button></a>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="table2">
+              <div class="svgs">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-wallet-fill"
+                  viewBox="0 0 16 16">
+                  < path
+                    d="M1.5 2A1.5 1.5 0 0 0 0 3.5v2h6a.5.5 0 0 1 .5.5c0 .253.08.644.306.958.207.288.557.542 1.194.542.637 0 .987-.254 1.194-.542.226-.314.306-.705.306-.958a.5.5 0 0 1 .5-.5h6v-2A1.5 1.5 0 0 0 14.5 2h-13z" />
+                  <path
+                    d="M16 6.5h-5.551a2.678 2.678 0 0 1-.443 1.042C9.613 8.088 8.963 8.5 8 8.5c-.963 0-1.613-.412-2.006-.958A2.679 2.679 0 0 1 5.551 6.5H0v6A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-6z" />
+                </svg>
+              </div>
+              <h1>Ödəmə et</h1>
+              <p>
+                Visa, Master bank kartları E-Manat vasitəsi ilə ödəniş Yerində
+                nəğd ödəniş
+              </p>
+              <a href=""> <button class="btn btn-primary">Etrafli</button></a>
+            </div>
+          </div>
+          <div class="col-1">
+            <div class="table3">
+              <div class="svgs">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z" />
+                </svg>
+              </div>
+              <h1>Bağlamanı əldə et</h1>
+              <p style="overflow: hidden;">
+                Bağlamanı Bakı anbarımızdan əldə edə və ya kuryer xidmətimizdən
+                istifadə edə bilərsiniz.
+              </p>
+              <a href=""> <button class="btn btn-primary">Etrafli</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tariflerrr">
+        <div class="tarifler">
+          <div class="d-flex bd-highlight tarifler-about">
+            <div class="p-2 flex-grow-1 bd-highlight one">Tarifler</div>
+    
+            <div class="p-2 bd-highlight two">
+              <button data-currency-rate="1.7" data-currency="$"
+                data-price='[{"from_weight":0,"to_weight":0.1,"liquid_price":1,"price":1,"discounted_price":0.99},{"from_weight":0.101,"to_weight":0.249,"liquid_price":2,"price":2,"discounted_price":1.99},{"from_weight":0.25,"to_weight":0.499,"liquid_price":3,"price":3,"discounted_price":2.99},{"from_weight":0.5,"to_weight":0.749,"liquid_price":4,"price":4,"discounted_price":3.79},{"from_weight":0.75,"to_weight":0.999,"liquid_price":4.2,"price":4.2,"discounted_price":3.49},{"from_weight":1,"to_weight":4.999,"liquid_price":4.5,"price":4.5,"discounted_price":3.49},{"from_weight":5,"to_weight":9.999,"liquid_price":4.3,"price":4.3,"discounted_price":3.49},{"from_weight":10,"to_weight":9999999,"liquid_price":4,"price":4,"discounted_price":4}]'
+                class="btn btn--tab js-calculator-tab-c is-tab-active">
+                <img src="https://velocity.az/frontend/web/uploads//images/country/Turkey.svg" alt="Türkiyə" />
+                <span style="color: white;">Türkiyə</span>
+              </button>
+            </div>
+            <div class="p-2 bd-highlight three">
+              <button data-currency-rate="1.7" data-currency="$"
+                data-price='[{"from_weight":0.001,"to_weight":0.1,"liquid_price":1.5,"price":1.5,"discounted_price":null},{"from_weight":0.101,"to_weight":0.249,"liquid_price":2.5,"price":2.5,"discounted_price":null},{"from_weight":0.25,"to_weight":0.499,"liquid_price":4.5,"price":4.5,"discounted_price":null},{"from_weight":0.5,"to_weight":0.749,"liquid_price":5.5,"price":5.5,"discounted_price":5.5},{"from_weight":0.75,"to_weight":0.999,"liquid_price":6.5,"price":6.5,"discounted_price":6.5},{"from_weight":1,"to_weight":4.999,"liquid_price":7.95,"price":7.95,"discounted_price":7.95},{"from_weight":5,"to_weight":9.999,"liquid_price":7.5,"price":7.5,"discounted_price":7.5},{"from_weight":10,"to_weight":100000,"liquid_price":6.5,"price":6.5,"discounted_price":6.5}]'
+                class="btn btn--tab js-calculator-tab-c">
+                <img src="https://velocity.az/frontend/web/uploads//images/country/US.svg" alt="ABŞ" />
+                <span style="color: white">ABŞ</span>
+              </button>
+            </div>
+          </div>
+    
+    
+    
+        </div>
+        <div class="container tarif-item">
+          <div class="row items">
+            <div class="col-3 item svg"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-box" viewBox="0 0 16 16">
+                <path
+                  d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z" />
+              </svg></div>
+            <div class="col-3 item">
+              <p style="color: white;"> 0.001 kq’dan 0.100 kq’a qədər</p>
+            </div>
+            <div class="col-3 item">
+              <span id="span">Adi mehsul</span><br>
+              <span style="color: white;font-size: 20px;">0.99 USD</span><br>
+              <span style="text-decoration: line-through;">1 USD</span>
+            </div>
+            <div class="col-3 item"> <span id="span">Maye ve Kosmetik</span><br>
+              <span style="color: white;font-size: 20px;">0.99 USD</span><br>
+              <span style="text-decoration: line-through;">1 USD</span>
+            </div>
+          </div>
+        </div>
+        <div class="container tarif-item">
+          <div class="row items">
+            <div class="col-3 item svg"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-box" viewBox="0 0 16 16">
+                <path
+                  d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z" />
+              </svg></div>
+            <div class="col-3 item">
+              <p style="color: white;"> 0.001 kq’dan 0.100 kq’a qədər</p>
+            </div>
+            <div class="col-3 item">
+              <span id="span">Adi mehsul</span><br>
+              <span style="color: white;font-size: 20px;">0.99 USD</span><br>
+              <span style="text-decoration: line-through;">1 USD</span>
+            </div>
+            <div class="col-3 item"> <span id="span">Maye ve Kosmetik</span><br>
+              <span style="color: white;font-size: 20px;">0.99 USD</span><br>
+              <span style="text-decoration: line-through;">1 USD</span>
+            </div>
+          </div>
+        </div>
+        <div class="container tarif-item">
+          <div class="row items">
+            <div class="col-3 item svg"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-box" viewBox="0 0 16 16">
+                <path
+                  d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5 8.186 1.113zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z" />
+              </svg></div>
+            <div class="col-3 item">
+              <p style="color: white;"> 0.001 kq’dan 0.100 kq’a qədər</p>
+            </div>
+            <div class="col-3 item">
+              <span id="span">Adi mehsul</span><br>
+              <span style="color: white;font-size: 20px;">0.99 USD</span><br>
+              <span style="text-decoration: line-through;">1 USD</span>
+            </div>
+            <div class="col-3 item"> <span id="span">Maye ve Kosmetik</span><br>
+              <span style="color: white;font-size: 20px;">0.99 USD</span><br>
+              <span style="text-decoration: line-through;">1 USD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shop-header">
+        <div class="container">
+          <div style="display: flex;flex-wrap: nowrap" class="row">
+            <div class="col-6">
+             <h2  class="shoph2" style="color: #c9ffc7; font-size: 40px;
+             line-height: 56px;">Magazalar</h2>
+            </div>
+            <div class="col-6">
+              <a href="#"><button class="shp">
+                Hamsina bax
+              </button></a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="shop-carusel">
+        <div class="carousel shops" data-flickity='{ "groupCells": true }'>
+          <div class="carousel-cell shop"><img src="https://velocity.az/frontend/web/uploads//images/store/store-1.png" alt="trendyol"></div>
+          <div class="carousel-cell shop"><img src="https://velocity.az/frontend/web/uploads//images/store/store-2.png" alt="defacto"></div>
+          <div class="carousel-cell shop"><img src="https://velocity.az/frontend/web/uploads//images/store/store-3.png" alt=""></div>
+          <div class="carousel-cell shop"><img src="https://velocity.az/frontend/web/uploads//images/store/store-4.png" alt="defacto"></div>
+          <div class="carousel-cell shop"><img src="https://velocity.az/frontend/web/uploads//images/store/store-5.png" alt="defacto"></div>
+          <div class="carousel-cell shop"><img src="https://velocity.az/frontend/web/uploads//images/store/store-6.png" alt="defacto"></div>
+          <div class="carousel-cell shop"><img src="https://velocity.az/frontend/web/uploads//images/store/store-7.png" alt="defacto"></div>
+          <div class="carousel-cell shop"><img src="https://velocity.az/frontend/web/uploads//images/store/store-8.png" alt="defacto"></div>
+          <div class="carousel-cell shop"><img src="https://velocity.az/frontend/web/uploads//images/store/store-9.png" alt="defacto"></div>
+          <div class="carousel-cell shop"><img src="https://velocity.az/frontend/web/uploads//images/store/store-10.png" alt="defacto"></div>
+          
+        </div>
+      </div>
+      <div class="yenilikler">
+        <div class="container new">
+           <div class="row newitem">
+              <div class="col-6 items">
+                <div class="headitem">
+                  <h2>Ne yenilik var?</h2>
+                  <p>Ən son yeniliklər və xəbərlərlə tanış olun</p>
+                  <div class="itembutton">
+                    <a href="#"><button class="itms">Hamsina bax</button></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 items">
+                <div class="part1">
+                  <img src="https://velocity.az/frontend/web/uploads//images/slider/kicik.jpg" alt="img1">
+                  <div class="part1about">
+                    <a href="#"><h1>Velocity Kargodan "Məktəb Qabağı" Möhtəşəm Endirim Kampanyası </h1></a>
+                    <p class="cargo__time">11.08.2021</p>
+                    <a id="tamam" href="#">Tamamini oxu</a>
+                  </div>
+                 
+                </div>
+               
+              </div>
+           </div>
+           <div class="row newitem">
+            <div class="col-6 items">
+              <div class="headitem">
+                <h2>Ne yenilik var?</h2>
+                <p>Ən son yeniliklər və xəbərlərlə tanış olun</p>
+                <div class="itembutton">
+                  <a href="#"><button class="itms">Hamsina bax</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 items">
+              <div class="part1">
+                <img src="https://velocity.az/frontend/web/uploads//images/slider/kicik.jpg" alt="img1">
+                <div class="part1about">
+                  <a href="#"><h1>Velocity Kargodan "Məktəb Qabağı" Möhtəşəm Endirim Kampanyası </h1></a>
+                  <p class="cargo__time">11.08.2021</p>
+                  <a id="tamam" href="#">Tamamini oxu</a>
+                </div>
+               
+              </div>
+             
+            </div>
+         </div>
+         <div class="row newitem">
+          <div class="col-6 items">
+            <div class="headitem">
+              <h2>Ne yenilik var?</h2>
+              <p>Ən son yeniliklər və xəbərlərlə tanış olun</p>
+              <div class="itembutton">
+                <a href="#"><button class="itms">Hamsina bax</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 items">
+            <div class="part1">
+              <img src="https://velocity.az/frontend/web/uploads//images/slider/kicik.jpg" alt="img1">
+              <div class="part1about">
+                <a style="text-decoration: none;" href="#"><h1>Velocity Kargodan "Məktəb Qabağı" Möhtəşəm Endirim Kampanyası </h1></a>
+                <p class="cargo__time">11.08.2021</p>
+                <a id="tamam" style="text-decoration: none;" href="#">Tamamini oxu</a>
+              </div>
+             
+            </div>
+           
+          </div>
+       </div>
+        </div>
+      </div>
+      
+      <footer style="margin-top: 60px;" class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="heading">
+                <h1 class="heading__title">Kömək lazımdır?</h1>
+              </div>
+              <ul class="footer__unvan">
+                <li>
+                  <i style="margin-left: -40px;" class="icon-map-marker_two_tone icon-lg icons"><span class="path1"></span><span
+                      class="path2"></span><span class="path3"></span></i>
+                  <a href="#"><span>Bakı şəh.,AZ1072, Nərimanov rayonu Koroğlu Rəhimov küçəsi Gəncə şəhəri Həsən Əliyev
+                      pr.75</span></a>
+                </li>
+                <li>
+                  <i style="margin-left: -40px;" class="icon-email_two_tone icon-lg icons"><span class="path1"></span><span class="path2"></span><span
+                      class="path3"></span></i>
+                  
+                      <a  href="#"><span> info@velocity.az </span></a>
+    
+                </li>
+                <li>
+                  <i style="margin-left: -40px;" class="icon-phone_two_tone icon-lg icons"><span class="path1"></span><span class="path2"></span><span
+                      class="path3"></span></i>
+                  <a  href="#">+994123108707</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul style="margin-left:20px;margin-top: 30px;" class="footers__nav">
+                <li>
+                  <a style="text-decoration: none;color: white;" href="#">Daşınmasına icazə yoxdur</a>
+                </li>
+                <li>
+                  <a style="text-decoration: none;color: white;" href="#">Tez-tez verilən suallar</a>
+                </li>
+                <li>
+                  <a style="text-decoration: none;color: white;" href="#">Gizlilik siyasəti</a>
+                </li>
+                <li>
+                  <a style="text-decoration: none;color: white;" href="#">İstifadəçi razılaşması</a>
+                </li>
+                <li>
+                  <a style="text-decoration: none;color: white;" href="#">Sifariş et qaydaları</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="ftrbtm">
+              <img  src="https://velocity.az/front/img/logo/logo-white.svg" alt="">
+              <p style="color: rgba(255,255,255,0.7); margin-top: 20px;"  class="copyright">©️ 2021 Velocity LTD. Bütün hüquqlar qorunur</p>
+          </div>
+          <div  class="social-icons d-none d-md-block">
+              <a  href="https://www.facebook.com/" target="blank" class="social-icons_link"><i class="icon-facebook"></i></a>
+              <a href="https://www.instagram.com/" target="blank" class="social-icons_link"><i class="icon-instagram"></i></a>
+              <a style="margin-right: 150px;" href="https://www.youtube.com/" target="blank" class="social-icons_link"><i class="icon-youtube"></i></a>
+          </div>
+      </div>
+      </footer>
+     
+    
+    
+    
+      
+     
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
